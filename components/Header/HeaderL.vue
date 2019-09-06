@@ -1,6 +1,19 @@
 <template>
-    <section class="hidden-sm-and-down">
-        <span style="font-family: 'Poppins', sans-serif; font-size: 3rem;">Poppins</span>
-        <span style="font-size: 3rem;">HEADER L</span>
+    <section class="hidden-sm-and-down content-frame">
+        Nattawat Supangsarn
     </section>
 </template>
+
+<style scoped>
+
+.content-frame {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color: hsl(48, 100%, 67%);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+</style>
