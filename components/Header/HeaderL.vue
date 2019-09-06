@@ -1,12 +1,12 @@
 <template>
-    <section class="hidden-sm-and-down content-frame">
+    <section id="header-frame" class="hidden-sm-and-down header-frame">
         Nattawat Supangsarn
     </section>
 </template>
 
 <style scoped>
 
-.content-frame {
+.header-frame {
     height: 100vh;
     display: flex;
     justify-content: center;

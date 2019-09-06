@@ -1,12 +1,12 @@
 <template>
-    <section class="hidden-sm-and-down content-frame">
+    <section id="content-frame" class="hidden-sm-and-down information-frame">
         Information
     </section>
 </template>
 
 <style scoped>
 
-.content-frame {
+.information-frame {
     height: 100vh;
     display: flex;
     justify-content: center;

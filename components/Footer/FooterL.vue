@@ -1,12 +1,12 @@
 <template>
-    <section class="hidden-sm-and-down content-frame">
-        FOOTER L
+    <section id="footer-frame" class="hidden-sm-and-down footer-frame">
+        FOOTER
     </section>
 </template>
 
 <style scoped>
 
-.content-frame {
+.footer-frame {
     height: 100vh;
     display: flex;
     justify-content: center;
