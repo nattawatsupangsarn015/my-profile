@@ -17,6 +17,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  router: {
+    middleware: 'i18n'
+  },
+
   /*
   ** Customize the progress-bar color
   */
@@ -30,17 +35,16 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/i18n.js'
   ],
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/vuetify',
   ],
   /*
   ** vuetify module configuration
