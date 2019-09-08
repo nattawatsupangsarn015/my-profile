@@ -1,5 +1,5 @@
 <template>
-    <section id="footer-frame" class="hidden-sm-and-down footer-frame">
+    <section id="footer-frame-md" class="hidden-sm-and-down footer-frame">
         FOOTER
     </section>
 </template>

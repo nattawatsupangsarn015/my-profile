@@ -1,5 +1,5 @@
 <template>
-    <section id="content-frame" class="hidden-sm-and-down information-frame">
+    <section id="content-frame-md" class="hidden-sm-and-down information-frame">
         Information
     </section>
 </template>

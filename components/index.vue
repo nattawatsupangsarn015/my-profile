@@ -9,7 +9,7 @@
 
 <script>
 import Header from '~/components/Header/Header.vue';
-import Scroll from '~/components/Scroll.vue';
+import Scroll from '~/components/Scroll/Scroll.vue';
 import Content from '~/components/Content/Content.vue';
 import Footer from '~/components/Footer/Footer.vue';
 

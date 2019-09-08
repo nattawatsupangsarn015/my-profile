@@ -1,5 +1,5 @@
 <template>
-    <section id="header-frame" class="hidden-sm-and-down header-frame">
+    <section id="header-frame-md" class="hidden-sm-and-down header-frame">
         Nattawat Supangsarn
     </section>
 </template>
