@@ -2,9 +2,16 @@
     <section class="hidden-sm-and-up">
         <div id="scroll-position" class="scroll-position">
             <div class="scroll-frame">
-                <div @click="goHeader()" class="dot-scroll" />
-                <div @click="goContent()" class="dot-scroll" />
-                <div @click="goFooter()" class="dot-scroll" />
+                <div class="show-page">
+                    <hr class="hr-scroll">
+                    <div id="text-xs">01</div>
+                </div>
+                <div>
+                    <div id="dot-01-xs" style="background-color: #bea67c;" @click="goHeader()" class="dot-scroll" />
+                    <div id="dot-02-xs" @click="goContent()" class="dot-scroll" />
+                    <div id="dot-03-xs" @click="goContent2()" class="dot-scroll" />
+                    <div id="dot-04-xs" @click="goFooter()" class="dot-scroll" />
+                </div>
             </div>
         </div>
     </section>
@@ -14,6 +21,56 @@
 import $ from "jquery";
 
 export default {
+    mounted() {
+        // var defualtScroll = 0
+        var $w = $(window).scroll( function(event) {
+            var headerFrame = $('#header-frame-xs').offset().top
+            var contentFrame = $('#content-frame-xs').offset().top
+            var contentFrame2 = $('#content2-frame-xs').offset().top
+            var footerFrame = $('#footer-frame-xs').offset().top
+
+            if($w.scrollTop() >= footerFrame) {
+                $("#text-xs").text(() => {
+                    return "04";
+                });
+
+                $('#dot-01-xs').css({"background-color": "#303030"});
+                $('#dot-02-xs').css({"background-color": "#303030"});
+                $('#dot-03-xs').css({"background-color": "#303030"});
+                $('#dot-04-xs').css({"background-color": "#bea67c"});
+            }
+            else if($w.scrollTop() >= contentFrame2 && $w.scrollTop() < footerFrame) {
+                $("#text-xs").text(() => {
+                    return "03";
+                });
+
+                $('#dot-01-xs').css({"background-color": "#303030"});
+                $('#dot-02-xs').css({"background-color": "#303030"});
+                $('#dot-03-xs').css({"background-color": "#bea67c"});
+                $('#dot-04-xs').css({"background-color": "#303030"});
+            }
+            else if($w.scrollTop() >= contentFrame && $w.scrollTop() < contentFrame2){
+                $("#text-xs").text(() => {
+                    return "02";
+                });
+
+                $('#dot-01-xs').css({"background-color": "#303030"});
+                $('#dot-02-xs').css({"background-color": "#bea67c"});
+                $('#dot-03-xs').css({"background-color": "#303030"});
+                $('#dot-04-xs').css({"background-color": "#303030"});
+            }
+            else {
+                $("#text-xs").text(() => {
+                    return "01";
+                });
+
+                $('#dot-01-xs').css({"background-color": "#bea67c"});
+                $('#dot-02-xs').css({"background-color": "#303030"});
+                $('#dot-03-xs').css({"background-color": "#303030"});
+                $('#dot-04-xs').css({"background-color": "#303030"});
+            }
+        });
+    },
     methods: {
         goHeader() {
             $('html, body').animate({
@@ -23,6 +80,11 @@ export default {
         goContent() {
             $('html, body').animate({
                 scrollTop: $("#content-frame-xs").offset().top
+            }, 500);
+        },
+        goContent2() {
+            $('html, body').animate({
+                scrollTop: $("#content2-frame-xs").offset().top
             }, 500);
         },
         goFooter() {
@@ -40,9 +102,11 @@ export default {
     position: fixed;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     height: 100vh;
-    right: 2rem;
+    right: 3rem;
+    bottom: 1rem;
+    z-index: 2;
 }
 
 .scroll-frame{
@@ -52,15 +116,29 @@ export default {
     align-items: center;
     height: 20rem;
     width: 0.2rem;
-    background-color: black;
-    border-radius: 1rem;
+}
+
+.show-page {
+    color: #cb8812;
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(90deg);
+    align-items: center;
+    width: 5rem;
+    font-size: 2rem;
+}
+
+.hr-scroll {
+    border: 1px solid #cb8812;
+    width: 2rem;
 }
 
 .dot-scroll {
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(255,255,255,1);
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #303030;
     border-radius: 1rem;
+    margin-bottom: 2rem;
     cursor: pointer;
 }
 
