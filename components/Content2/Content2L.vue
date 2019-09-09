@@ -1,0 +1,185 @@
+<template>
+    <section id="content2-frame-md" class="hidden-sm-and-down information-frame-content2">
+        <div class="content-frame">
+            <div class="content-right">
+                <div class="content-sec02">
+                    <h1>A LITTLE MORE ABOUT ME <hr class="hr-content-sec02"></h1>
+                    <ul>
+                        <li>
+                            <div style="margin-left: 5rem;">
+                                <span style="color: #0c1351;">Graduated</span> 
+                                with B.E. in Department of Computer Engineering, from PSU Phuket Campus Class of 2017.
+                            </div>
+                        </li>
+                        <li>
+                            <div style="margin-left: 5rem;">
+                                <span style="color: #0c1351;">Skills</span> 
+                                | Javascript, Vue.js, CSS, HTML5, Nuxt.js, Node.js, MySQL, MongoDB, Mongoose, Git.
+                            </div>
+                        </li>
+                        <li>
+                            <div style="margin-left: 5rem;">
+                                <span style="color: #0c1351;">Work Experience</span> 
+                                | Aug 18 - Sep 20
+                                <div style="margin: 1rem 0rem;">Front-end Developer at Bookallaround Co., Ltd.</div>
+                                Write, style & developing front-end components for company's website - a travel booking playform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="hr-under-content">
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <div class="text-section">
+                <hr />
+                03.
+            </div>
+        </div>
+    </section>
+</template>
+
+<script>
+import $ from 'jquery';
+
+export default {
+    mounted() {
+        var contentFrame2 = $('#content2-frame-md').offset().top
+        var footerFrame = $('#footer-frame-md').offset().top
+        
+        var getHeightOfHeader = $('#header-menu-md').height()
+        var getHeightOfContentFrame = $('.information-frame-content2').height()
+        $('.information-frame-content2').css({
+            'height': (getHeightOfContentFrame + getHeightOfHeader) + 'px',
+            // 'padding-top': getHeightOfHeader + 'px'
+        });
+
+        var $w = $(window).scroll( function(event) {
+            if($w.scrollTop() >= (contentFrame2 - 400) && $w.scrollTop() < (footerFrame + 400)){
+                $('.content-right').addClass("add-animation");
+                $('.content-right').css({
+                    'display': 'flex'
+                })
+            }
+        });
+    }
+}
+</script>
+
+<style scoped>
+
+.add-animation {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.information-frame-content2 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    background-color: #ffff;
+}
+
+.content-frame {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.content-right {
+    height: 63%;
+    width: 100%;
+    display: none;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.content-sec02 {
+    width: 75%;
+}
+
+.content-sec02 h1 {
+    display: flex;
+    align-items: center;
+    color: #be4d08;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hr-content-sec02 {
+    width: 9rem;
+    margin-left: 2rem;
+}
+
+.content-sec02 h2 {
+    color: #a9946e;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    line-height: 1.1em;
+}
+
+.content-sec02 h3 {
+    color: #0c1351;
+    text-align: justify;
+    width: 59%;
+    font-size: 1.2rem;
+}
+
+.content-sec02 ul {
+    margin-left: 5rem;
+    color: #a9946e;
+    font-size: 1.3rem;
+    line-height: 1.1em;
+    font-weight: 700;
+    width: 68%;
+    text-align: justify;
+}
+
+.content-sec02 li {
+    margin-top: 2rem;
+    letter-spacing: 1.2px;
+}
+
+.hr-under-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+    width: 68%;
+    margin-top: 1rem;
+}
+
+.hr-under-content hr {
+    width: 4rem;
+    border: 2px solid #a9946e;
+}
+
+.text-section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 10%;
+    right: 19%;
+    height: 7rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.text-section hr {
+    transform: rotate(90deg); 
+    width: 4rem;
+    border: 2px solid #a9946e;
+}
+
+@keyframes fadeIn  {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+</style>

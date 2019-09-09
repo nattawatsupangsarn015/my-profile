@@ -2,9 +2,16 @@
     <section class="hidden-sm-and-down">
         <div id="scroll-position" class="scroll-position">
             <div class="scroll-frame">
-                <div @click="goHeader()" class="dot-scroll" />
-                <div @click="goContent()" class="dot-scroll" />
-                <div @click="goFooter()" class="dot-scroll" />
+                <div class="show-page">
+                    <hr class="hr-scroll">
+                    <div id="text-md">01</div>
+                </div>
+                <div>
+                    <div id="dot-01-md" style="background-color: #bea67c;" @click="goHeader()" class="dot-scroll" />
+                    <div id="dot-02-md" @click="goContent()" class="dot-scroll" />
+                    <div id="dot-03-md" @click="goContent2()" class="dot-scroll" />
+                    <div id="dot-04-md" @click="goFooter()" class="dot-scroll" />
+                </div>
             </div>
         </div>
     </section>
@@ -17,22 +24,52 @@ export default {
     mounted() {
         // var defualtScroll = 0
         var $w = $(window).scroll( function(event) {
-            if($w.scrollTop() > 100){
-                $(".scroll-position")
-                .css({
-                    "display": "flex",
-                    "justify-content": "flex-end",
-                    "align-items": "center"
+            var headerFrame = $('#header-frame-md').offset().top
+            var contentFrame = $('#content-frame-md').offset().top
+            var contentFrame2 = $('#content2-frame-md').offset().top
+            var footerFrame = $('#footer-frame-md').offset().top
+
+            if($w.scrollTop() >= footerFrame) {
+                $("#text-md").text(() => {
+                    return "04";
                 });
+
+                $('#dot-01-md').css({"background-color": "#303030"});
+                $('#dot-02-md').css({"background-color": "#303030"});
+                $('#dot-03-md').css({"background-color": "#303030"});
+                $('#dot-04-md').css({"background-color": "#bea67c"});
+            }
+            else if($w.scrollTop() >= contentFrame2 && $w.scrollTop() < footerFrame) {
+                $("#text-md").text(() => {
+                    return "03";
+                });
+
+                $('#dot-01-md').css({"background-color": "#303030"});
+                $('#dot-02-md').css({"background-color": "#303030"});
+                $('#dot-03-md').css({"background-color": "#bea67c"});
+                $('#dot-04-md').css({"background-color": "#303030"});
+            }
+            else if($w.scrollTop() >= contentFrame && $w.scrollTop() < contentFrame2){
+                $("#text-md").text(() => {
+                    return "02";
+                });
+
+                $('#dot-01-md').css({"background-color": "#303030"});
+                $('#dot-02-md').css({"background-color": "#bea67c"});
+                $('#dot-03-md').css({"background-color": "#303030"});
+                $('#dot-04-md').css({"background-color": "#303030"});
             }
             else {
-                $(".scroll-position")
-                .css({
-                    "display": "none"
+                $("#text-md").text(() => {
+                    return "01";
                 });
+
+                $('#dot-01-md').css({"background-color": "#bea67c"});
+                $('#dot-02-md').css({"background-color": "#303030"});
+                $('#dot-03-md').css({"background-color": "#303030"});
+                $('#dot-04-md').css({"background-color": "#303030"});
             }
         });
-        // this.$nextTick(this.updatePackageDom);
     },
     methods: {
         goHeader() {
@@ -43,6 +80,11 @@ export default {
         goContent() {
             $('html, body').animate({
                 scrollTop: $("#content-frame-md").offset().top
+            }, 500);
+        },
+        goContent2() {
+            $('html, body').animate({
+                scrollTop: $("#content2-frame-md").offset().top
             }, 500);
         },
         goFooter() {
@@ -58,30 +100,12 @@ export default {
 
 .scroll-position {
     position: fixed;
-    display: none;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
     right: 6rem;
-    animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    z-index: 2;
 }
 
 .scroll-frame{
@@ -91,15 +115,29 @@ export default {
     align-items: center;
     height: 20rem;
     width: 0.2rem;
-    background-color: black;
-    border-radius: 1rem;
+}
+
+.show-page {
+    color: #cb8812;
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(90deg);
+    align-items: center;
+    width: 5rem;
+    font-size: 2rem;
+}
+
+.hr-scroll {
+    border: 1px solid #cb8812;
+    width: 2rem;
 }
 
 .dot-scroll {
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(255,255,255,1);
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #303030;
     border-radius: 1rem;
+    margin-bottom: 2rem;
     cursor: pointer;
 }
 
