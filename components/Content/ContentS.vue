@@ -1,5 +1,5 @@
 <template>
-    <section id="content-frame-xs" class="hidden-sm-and-up information-frame-xs">
+    <section id="content-mobile" class="hidden-sm-and-up information-frame-xs">
         <div class="content01-frame-xs">
             <div class="content-left">
                 <div class="hr-h1-xs">
@@ -35,8 +35,8 @@ import $ from 'jquery';
 
 export default {
     mounted() {
-        var contentFrame = $('#content-frame-xs').offset().top
-        var contentFrame2 = $('#content2-frame-xs').offset().top
+        var contentFrame = $('#content-mobile').offset().top
+        var contentFrame2 = $('#sub-content-mobile').offset().top
         
         var $w = $(window).scroll( function(event) {
             if($w.scrollTop() >= (contentFrame - 200) && $w.scrollTop() < (contentFrame2 + 200)){
@@ -114,10 +114,10 @@ export default {
 
 .content-sec01 h3 {
     color: #0c1351;
-    text-align: justify;
-    width: 59%;
+    /* text-align: justify; */
+    width: 73%;
     font-size: 0.8rem;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 .contact-button {

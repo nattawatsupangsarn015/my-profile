@@ -25,8 +25,8 @@ export default {
         // var defualtScroll = 0
         var $w = $(window).scroll( function(event) {
             var headerFrame = $('#header-frame-xs').offset().top
-            var contentFrame = $('#content-frame-xs').offset().top
-            var contentFrame2 = $('#content2-frame-xs').offset().top
+            var contentFrame = $('#content-mobile').offset().top
+            var contentFrame2 = $('#sub-content-mobile').offset().top
             var footerFrame = $('#footer-frame-xs').offset().top
 
             if($w.scrollTop() >= footerFrame) {
@@ -79,12 +79,12 @@ export default {
         },
         goContent() {
             $('html, body').animate({
-                scrollTop: $("#content-frame-xs").offset().top
+                scrollTop: $("#content-mobile").offset().top
             }, 500);
         },
         goContent2() {
             $('html, body').animate({
-                scrollTop: $("#content2-frame-xs").offset().top
+                scrollTop: $("#sub-content-mobile").offset().top
             }, 500);
         },
         goFooter() {

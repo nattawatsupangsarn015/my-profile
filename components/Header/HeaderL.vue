@@ -1,7 +1,16 @@
 <template>
     <section id="header-frame-md" class="hidden-sm-and-down header-frame">
-        <!-- <div class="change-language">
-        </div> -->
+        <div id="change-language-md" class="change-language">
+            {{this.$i18n.locale.toUpperCase()}} 
+            <div class="arrow-down-frame">
+                <div id="arrow-change-language-md" class="arrow-down-language" />
+                <div id="menu-language-md" class="menu-language-before">
+                    <div @click="changePath($i18n.locale === 'en' ? '/th' : '/')">
+                        {{this.$i18n.locale === 'en' ? 'TH' : 'EN'}}
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="learn-more-mouse-frame">
             <div class="learn-more-mouse">
                 <img src="/mouse.png" class="img-mouse">
@@ -16,8 +25,8 @@
         </div>
         <div class="header-content-frame">
             <div class="header-content">
-                <h1>NATTAWAT</h1> 
-                <h1>SUPANGSARN</h1>
+                <h1>{{$t('Name')}}</h1> 
+                <h1>{{$t('LastName')}}</h1>
                 <h2>FRONT-END DEVELOPER</h2>
                 <div class="icon-contact-frame">
                     <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
@@ -34,24 +43,14 @@
                     </a>
                 </div>
                 <div class="learn-more">
-                    <!-- <div class="learn-more-mouse">
-                        <img src="/mouse.png" class="img-mouse">
-                        <div class="full-arrow">
-                            <div class="line-arrow"/>
-                            <div class="arrow-down"/>
-                        </div>
-                        <div class="text-scroll">
-                            SCROLL
-                        </div>
-                    </div> -->
                     <div class="learn-more-button" @click="goContent()">LEARN MORE</div>
                 </div>
             </div>
             
         </div>
         <div id="header-menu-md" class="header-menu"> 
-            <div @click="backHome()" style="cursor: pointer;">NATTAWAT SUPANGSARN</div>
-            <div>
+            <div @click="backHome()" style="cursor: pointer;">{{$t('Name')}} {{$t('LastName')}}</div>
+            <div class="icon-menu-header">
                 <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
                     <img src="/linkedin-icon.png" class="icon-contact"/>
                 </a>
@@ -64,6 +63,17 @@
                 <a href="tel:+669322942" target="_blank" class="icon-link">
                     <img src="/phone-icon.png" class="icon-contact"/>
                 </a>
+                <div id="change-language-header-menu-md" style="position: relative;" class="change-language-header">
+                    {{this.$i18n.locale.toUpperCase()}} 
+                    <div class="arrow-down-frame">
+                        <div id="arrow-change-language-header-menu-md" class="arrow-down-language" />
+                        <div id="menu-language-header-menu-md" class="menu-language-before">
+                            <div @click="changePath($i18n.locale === 'en' ? '/th' : '/')">
+                                {{this.$i18n.locale === 'en' ? 'TH' : 'EN'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -73,7 +83,27 @@
 import $ from "jquery";
 
 export default {
+    data() {
+        return {
+            items: [
+                { chooseLang: 'EN' },
+                { chooseLang: 'TH' }
+            ],
+            language: 'EN'
+        }
+    },
     mounted() {
+
+        $('#change-language-md').click(function(){
+            $('#arrow-change-language-md').toggleClass('arrow-up-language');
+            $('#menu-language-md').toggleClass('menu-language')
+        });
+
+        $('#change-language-header-menu-md').click(function(){
+            $('#arrow-change-language-header-menu-md').toggleClass('arrow-up-language');
+            $('#menu-language-header-menu-md').toggleClass('menu-language')
+        })
+
         var $w = $(window).scroll( function(event) {
             var contentFrame = $("#content-frame-md").offset().top
             var heightOfHeader = $('#header-menu-md').height()
@@ -113,12 +143,87 @@ export default {
             $('html, body').animate({
                 scrollTop: $("#content-frame-md").offset().top
             }, 500);
+        },
+        changePath(item) {
+            this.$router.push(item)
         }
     }
 }
 </script>
 
 <style scoped>
+
+.change-language {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    color: #ffff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.change-language-header {
+    color: #ffff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.arrow-down-frame {
+    height: 100%;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-down-language {
+    width: 4px;
+    height: 4px;
+    border-right: 0.5px solid rgba(255,255,255,1);
+    border-bottom: 0.5px solid rgba(255,255,255,1);
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+.arrow-up-language {
+    width: 4px;
+    height: 4px;
+    border-right: 0.5px solid rgba(255,255,255,1);
+    border-bottom: 0.5px solid rgba(255,255,255,1);
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+.menu-language-before {
+    display: none;
+}
+
+.menu-language {
+    position: absolute;
+    display: block;
+    top: 2rem;
+    left: 0;
+    opacity: 1;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 9px;
+}
 
 .header-frame {
     position: relative;
@@ -271,6 +376,13 @@ export default {
     background-color: #0c1351;
     color: #be4d08;
     z-index: 1;
+}
+
+.icon-menu-header {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 @keyframes animate {

@@ -1,5 +1,5 @@
 <template>
-    <section id="content2-frame-xs" class="hidden-sm-and-up information-frame-content2-xs">
+    <section id="sub-content-mobile" class="hidden-sm-and-up information-frame-content2-xs">
         <div class="content-frame">
             <div class="content-right-xs">
                 <div class="content-sec02">
@@ -22,7 +22,7 @@
                                 <span style="color: #0c1351;">Work Experience</span> 
                                 | Aug 18 - Sep 20
                                 <div style="margin: 1rem 0rem;">Front-end Developer at Bookallaround Co., Ltd.</div>
-                                Write, style & developing front-end components for company's website - a travel booking playform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.
+                                Write, style & developing front-end components for company's website - a travel booking platform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.
                             </div>
                         </li>
                     </ul>
@@ -44,7 +44,7 @@ import $ from 'jquery';
 
 export default {
     mounted() {
-        var contentFrame2 = $('#content2-frame-xs').offset().top
+        var contentFrame2 = $('#sub-content-mobile').offset().top
         var footerFrame = $('#footer-frame-xs').offset().top
         
         var getHeightOfHeader = $('#header-menu-xs').height()
@@ -97,6 +97,7 @@ export default {
 .content-sec02 {
     padding: 2rem;
     width: 100%;
+    height: 100%;
 }
 
 .content-sec02 h1 {

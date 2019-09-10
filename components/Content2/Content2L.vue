@@ -22,7 +22,7 @@
                                 <span style="color: #0c1351;">Work Experience</span> 
                                 | Aug 18 - Sep 20
                                 <div style="margin: 1rem 0rem;">Front-end Developer at Bookallaround Co., Ltd.</div>
-                                Write, style & developing front-end components for company's website - a travel booking playform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.
+                                Write, style & developing front-end components for company's website - a travel booking platform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.
                             </div>
                         </li>
                     </ul>

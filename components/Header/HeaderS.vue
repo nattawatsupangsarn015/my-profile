@@ -1,8 +1,19 @@
 <template>
     <section id="header-frame-xs" class="hidden-sm-and-up header-frame">
+        <div id="change-language-xs" class="change-language">
+            {{this.$i18n.locale.toUpperCase()}} 
+            <div class="arrow-down-frame">
+                <div id="arrow-change-language-xs" class="arrow-down-language" />
+                <div id="menu-language-xs" class="menu-language-before">
+                    <div @click="changePath($i18n.locale === 'en' ? '/th' : '/')">
+                        {{this.$i18n.locale === 'en' ? 'TH' : 'EN'}}
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="header-content-frame">
-            <h1>NATTAWAT</h1>
-            <h1>SUPANGSARN</h1>
+            <h1>{{$t('Name')}}</h1>
+            <h1>{{$t('LastName')}}</h1>
             <h2>FRONT-END DEVELOPER</h2>
             <div class="icon-header-scroll">
                 <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
@@ -20,7 +31,7 @@
             </div>
         </div>
         <div id="header-menu-xs" class="header-menu"> 
-            <div @click="backHome()" style="cursor: pointer; font-size: 1rem;">NATTAWAT SUPANGSARN</div>
+            <div @click="backHome()" style="cursor: pointer; font-size: 12px;">{{$t('Name')}} {{$t('LastName')}}</div>
             <div class="icon-header-scroll">
                 <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
                     <img src="/linkedin-icon.png" class="icon-contact"/>
@@ -34,6 +45,17 @@
                 <a href="tel:+669322942" target="_blank" class="icon-link">
                     <img src="/phone-icon.png" class="icon-contact"/>
                 </a>
+                <div id="change-language-header-menu-xs" style="position: relative;" class="change-language-header">
+                    {{this.$i18n.locale.toUpperCase()}} 
+                    <div class="arrow-down-frame">
+                        <div id="arrow-change-language-header-menu-xs" class="arrow-down-language" />
+                        <div id="menu-language-header-menu-xs" class="menu-language-before">
+                            <div @click="changePath($i18n.locale === 'en' ? '/th' : '/')">
+                                {{this.$i18n.locale === 'en' ? 'TH' : 'EN'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="learn-more-frame">
@@ -52,8 +74,19 @@ import $ from "jquery";
 
 export default {
     mounted() {
+
+        $('#change-language-xs').click(function(){
+            $('#arrow-change-language-xs').toggleClass('arrow-up-language');
+            $('#menu-language-xs').toggleClass('menu-language')
+        });
+
+        $('#change-language-header-menu-xs').click(function(){
+            $('#arrow-change-language-header-menu-xs').toggleClass('arrow-up-language');
+            $('#menu-language-header-menu-xs').toggleClass('menu-language')
+        })
+
         var $w = $(window).scroll( function(event) {
-            var contentFrame = $("#content-frame-xs").offset().top
+            var contentFrame = $("#content-mobile").offset().top
             var heightOfHeader = $('#header-menu-xs').height()
 
             if($w.scrollTop() > 100) {
@@ -89,14 +122,89 @@ export default {
         },
         goContent() {
             $('html, body').animate({
-                scrollTop: $("#content-frame-xs").offset().top
+                scrollTop: $("#content-mobile").offset().top
             }, 500);
+        },
+        changePath(item) {
+            this.$router.push(item)
         }
     }
 }
 </script>
 
 <style scoped>
+
+.change-language {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    color: #ffff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.change-language-header {
+    color: #ffff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.arrow-down-frame {
+    height: 100%;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-down-language {
+    width: 4px;
+    height: 4px;
+    border-right: 0.5px solid rgba(255,255,255,1);
+    border-bottom: 0.5px solid rgba(255,255,255,1);
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+.arrow-up-language {
+    width: 4px;
+    height: 4px;
+    border-right: 0.5px solid rgba(255,255,255,1);
+    border-bottom: 0.5px solid rgba(255,255,255,1);
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+.menu-language-before {
+    display: none;
+}
+
+.menu-language {
+    position: absolute;
+    display: block;
+    top: 2rem;
+    left: 0;
+    opacity: 1;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 9px;
+}
 
 .header-frame {
     position: relative;
@@ -178,7 +286,7 @@ export default {
 
 .icon-header-scroll {
     height: 2rem;
-    width: 39%;
+    width: 46%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,6 +319,13 @@ export default {
     font-size: 1rem;
     letter-spacing: 6px;
     color: #cb8812;
+}
+
+.icon-menu-header {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 @keyframes animate {
