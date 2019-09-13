@@ -43,7 +43,7 @@
                     </a>
                 </div>
                 <div class="learn-more">
-                    <div class="learn-more-button" @click="goContent()">LEARN MORE</div>
+                    <div class="learn-more-button" @click="goContent()">{{$t('learnMore')}}</div>
                 </div>
             </div>
             

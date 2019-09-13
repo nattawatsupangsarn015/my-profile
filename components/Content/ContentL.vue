@@ -15,11 +15,11 @@
             </div>
             <div class="content-right">
                 <div class="content-sec01">
-                    <h1 id="text-h1">HELLO !</h1>
-                    <h2 id="text-h2">I'm Max, a Front-end Developer</h2>
-                    <h2>from Bangkok, Thailand.</h2>
-                    <h3 style="margin-top: 2rem;">I love to code, and I love learning to get better at it. My passion for programming started when I was in a freashman year. I've always been fascinated by  computer but that was the first time I started to really know its capabillities, and what could you do with them, which is endless.</h3>
-                    <h3 style="margin-bottom: 2rem;">For me, coding feels like music, you can create anything you want once you know how and there are no rules in making one.</h3>
+                    <h1 id="text-h1">{{$t('hello')}} !</h1>
+                    <h2 id="text-h2">{{$t('introduce')}}, a Front-end Developer</h2>
+                    <h2>{{$t('address')}}</h2>
+                    <h3 style="margin-top: 2rem;">{{$t('contentParagraph1')}}</h3>
+                    <h3 style="margin-bottom: 2rem;">{{$t('contentParagraph2')}}</h3>
                     <hr style="width: 4%;">
                     <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="contact-button">
                         LET'S CONNECT!

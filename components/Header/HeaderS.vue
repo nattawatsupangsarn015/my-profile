@@ -63,7 +63,7 @@
                 <img src="/hand.png" class="img-hand"/>
             </div>
             <div @click="goContent()" class="learn-more-button">
-                LEARN MORE
+                {{$t('learnMore')}}
             </div>
         </div>
     </section>

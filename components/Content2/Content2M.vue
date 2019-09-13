@@ -3,24 +3,24 @@
         <div class="content-frame">
             <div class="content-right-sm">
                 <div class="content-sec02">
-                    <h1>A LITTLE MORE ABOUT ME <hr class="hr-content-sec02"></h1>
+                    <h1>{{$t('content2Topic')}} <hr class="hr-content-sec02"></h1>
                     <ul>
                         <li>
                             <div style="margin-left: 5rem;">
-                                <span style="color: #0c1351;">Graduated</span> 
-                                with B.E. in Department of Computer Engineering, from PSU Phuket Campus Class of 2017.
+                                <span style="color: #0c1351;">{{$t('graduated')}}</span> 
+                                {{$t('graduatedToppic')}}
                             </div>
                         </li>
                         <li>
                             <div style="margin-left: 5rem;">
-                                <span style="color: #0c1351;">Skills</span> 
+                                <span style="color: #0c1351;">{{$t('skillsToppic')}}</span> 
                                 | Javascript, Vue.js, CSS, HTML5, Nuxt.js, Node.js, MySQL, MongoDB, Mongoose, Git.
                             </div>
                         </li>
                         <li>
                             <div style="margin-left: 5rem;">
-                                <span style="color: #0c1351;">Work Experience</span> 
-                                | Aug 18 - Sep 20
+                                <span style="color: #0c1351;">{{$t('workExperience')}}</span> 
+                                | {{$t('rangeWork')}}
                                 <div style="margin: 1rem 0rem;">Front-end Developer at Bookallaround Co., Ltd.</div>
                                 Write, style & developing front-end components for company's website - a travel booking platform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.
                             </div>

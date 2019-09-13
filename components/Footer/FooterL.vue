@@ -4,14 +4,14 @@
             <img src="/pawprint.png" class="img-background" />
         </div>
         <div class="footer-content">
-            <h1>THANKS FOR</h1>
-            <h1>STOPPING BY !</h1>
+            <h1>{{$t('thankyou1')}}</h1>
+            <h1>{{$t('thankyou2')}}</h1>
             <div class="footer-contact-frame">
                 <div class="footer-contact">
                     <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="email-button">
                         EMAIL ME
                     </a>
-                    <div class="text-button"> OR </div>
+                    <div class="text-button">{{$i18n.locale === 'en' ? 'OR' : 'หรือ'}}</div>
                     <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="contact-button">
                         LET'S CONNECT!
                     </a>

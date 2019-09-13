@@ -1,5 +1,18 @@
 {
-    "hello": "Hello",
     "Name": "NATTAWAT",
-    "LastName": "SUPANGSARN"
+    "LastName": "SUPANGSARN",
+    "learnMore": "LEARN MORE",
+    "hello": "HELLO",
+    "introduce": "I'm Max",
+    "address": "from Bangkok, Thailand.",
+    "contentParagraph1": "I love to code, and I love learning to get better at it. My passion for programming started when I was in a freashman year. I've always been fascinated by  computer but that was the first time I started to really know its capabillities, and what could you do with them, which is endless.",
+    "contentParagraph2": "For me, coding feels like music, you can create anything you want once you know how and there are no rules in making one.",
+    "content2Topic": "A LITTLE MORE ABOUT ME",
+    "graduated": "Graduated",
+    "graduatedToppic": "with B.E. in Department of Computer Engineering, from PSU Phuket Campus Class of 2017.",
+    "skillsToppic": "Skills",
+    "workExperience": "Work Experience",
+    "rangeWork": "Aug 18, 2018 - Sep 20, 2019",
+    "thankyou1":"THANKS FOR",
+    "thankyou2":"STOPPING BY !"   
 }
