@@ -9,11 +9,11 @@
             <div class="footer-contact-frame">
                 <div class="footer-contact">
                     <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="email-button">
-                        EMAIL ME
+                        {{$t('emailMe')}}
                     </a>
                     <div class="text-button"> {{$i18n.locale === 'en' ? 'OR' : 'หรือ'}} </div>
                     <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="contact-button">
-                        LET'S CONNECT!
+                        {{$t('letConnect')}}
                     </a>
                 </div>
             </div>

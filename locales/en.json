@@ -13,6 +13,9 @@
     "skillsToppic": "Skills",
     "workExperience": "Work Experience",
     "rangeWork": "Aug 18, 2018 - Sep 20, 2019",
+    "workExperienceContent": "Write, style & developing front-end components for company's website - a travel booking platform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.",
     "thankyou1":"THANKS FOR",
-    "thankyou2":"STOPPING BY !"   
+    "thankyou2":"STOPPING BY !",
+    "emailMe": "EMAIL ME",
+    "letConnect": "LET'S CONNECT!"
 }
