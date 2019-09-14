@@ -78,5 +78,9 @@ module.exports = {
     */
     extend (config, ctx) {
     }
+  },
+
+  generate: {
+    routes: [ '/', '/th' ]
   }
 }
