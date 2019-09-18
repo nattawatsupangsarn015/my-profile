@@ -16,7 +16,8 @@
     "express": "^4.16.4",
     "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
-    "vue-i18n": "^8.11.2"
+    "vue-i18n": "^8.11.2",
+    "@nuxtjs/pwa": "latest"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
