@@ -82,7 +82,19 @@ module.exports = {
     extend (config, ctx) {
     }
   },
-
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: 'https://my-cdn.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET'
+      }
+    ]
+  },
+  manifest: {
+    name: 'Nattawat-s.com',
+    lang: 'en'
+  },
   generate: {
     routes: [ '/', '/th' ]
   }
