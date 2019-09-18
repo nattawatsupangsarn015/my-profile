@@ -6,6 +6,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Nattawat Supangsarn',
     meta: [
       { charset: 'utf-8' },
