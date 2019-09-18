@@ -117,7 +117,7 @@ export default {
     color: #0c1351;
     text-align: justify;
     width: 59%;
-    font-size: 0.8rem;
+    font-size: 12px;
     line-height: 2em;
 }
 
@@ -130,7 +130,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
     margin-top: 1rem;
     cursor: pointer;

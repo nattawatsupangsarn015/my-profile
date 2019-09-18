@@ -108,11 +108,11 @@ export default {
 
 .email-button {
     text-decoration: none;
-    font-size: 8px;
+    font-size: 12px;
     background-color: #0c1351;
     color: rgba(255,255,255,1);
-    width: 10rem;
-    height: 2.5rem;
+    width: 18rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,10 +122,10 @@ export default {
 }
 
 .text-button {
-    font-size: 8px;
+    font-size: 12px;
     color: rgba(255,255,255,1);
-    width: 10rem;
-    height: 2.5rem;
+    width: 18rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,11 +134,11 @@ export default {
 }
 
 .contact-button {
-    font-size: 8px;
+    font-size: 12px;
     background-color: #0c1351;
     color: rgba(255,255,255,1);
-    width: 10rem;
-    height: 2.5rem;
+    width: 18rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;

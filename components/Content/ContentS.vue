@@ -116,7 +116,7 @@ export default {
     color: #0c1351;
     /* text-align: justify; */
     width: 73%;
-    font-size: 0.8rem;
+    font-size: 12px;
     line-height: 1.5em;
 }
 
@@ -129,7 +129,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
     margin-top: 1rem;
     cursor: pointer;
@@ -211,7 +211,7 @@ export default {
 .content-sec02 ul {
     margin-left: 5rem;
     color: #cb8812;
-    font-size: 1.3rem;
+    font-size: 12px;
     line-height: 1.1em;
     font-weight: 700;
     width: 59%;

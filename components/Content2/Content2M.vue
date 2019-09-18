@@ -130,7 +130,7 @@ export default {
 .content-sec02 ul {
     margin-left: 5rem;
     color: #a9946e;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     line-height: 1.1em;
     font-weight: 700;
     width: 68%;

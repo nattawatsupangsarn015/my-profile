@@ -229,7 +229,7 @@ export default {
 .learn-more-button {
     color: rgba(255,255,255,1);
     border: 2px solid;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 2px;
     width: 23%;
     height: 2.2rem;

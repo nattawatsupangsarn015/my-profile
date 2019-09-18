@@ -21,7 +21,6 @@
                     <h3 style="margin-top: 2rem;">{{$t('contentParagraph1')}}</h3>
                     <h3 style="margin-bottom: 2rem;">{{$t('contentParagraph2')}}</h3>
                     <hr style="width: 4%;">
-                    123
                     <a aria-label="linkedIn" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="contact-button">
                         {{$t('letConnect')}}
                     </a>
@@ -130,7 +129,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
     margin-top: 1rem;
     cursor: pointer;

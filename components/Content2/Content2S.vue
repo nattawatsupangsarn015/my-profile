@@ -132,7 +132,7 @@ export default {
 
 .content-sec02 ul {
     color: #a9946e;
-    font-size: 0.8rem;
+    font-size: 12px;
     line-height: 1.1em;
     font-weight: 700;
     width: 90%;
@@ -171,9 +171,7 @@ export default {
 }
 
 .text-section hr {
-    transform: rotate(90deg); 
-    width: 4rem;
-    border: 2px solid #a9946e;
+    /*  */
 }
 
 @keyframes fadeIn  {

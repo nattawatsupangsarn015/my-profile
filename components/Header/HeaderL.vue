@@ -351,7 +351,7 @@ export default {
     height: 2.5rem;
     color: rgba(255,255,255,1);
     font-weight: 700;
-    font-size: 9px;
+    font-size: 12px;
     border: 2px solid;
     letter-spacing: 3px;
     cursor: pointer;
