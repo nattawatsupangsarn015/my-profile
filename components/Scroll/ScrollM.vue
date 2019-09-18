@@ -1,6 +1,6 @@
 <template>
     <section class="hidden-md-and-up hidden-xs-only">
-        <div id="scroll-position" class="scroll-position">
+        <div class="scroll-position">
             <div class="scroll-frame">
                 <div class="show-page">
                     <hr class="hr-scroll">

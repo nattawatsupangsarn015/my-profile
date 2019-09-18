@@ -21,7 +21,7 @@
                     <h3 style="margin-top: 2rem;">{{$t('contentParagraph1')}}</h3>
                     <h3 style="margin-bottom: 2rem;">{{$t('contentParagraph2')}}</h3>
                     <hr style="width: 4%;">
-                    <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="contact-button">
+                    <a aria-label="linkedIn" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="contact-button">
                         {{$t('letConnect')}}
                     </a>
                 </div>

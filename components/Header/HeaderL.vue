@@ -13,7 +13,7 @@
         </div>
         <div class="learn-more-mouse-frame">
             <div class="learn-more-mouse">
-                <img src="/mouse.png" class="img-mouse">
+                <img src="/mouse.png" alt="mouse" class="img-mouse">
                 <div class="full-arrow">
                     <div class="line-arrow"/>
                     <div class="arrow-down"/>
@@ -29,17 +29,17 @@
                 <h1>{{$t('LastName')}}</h1>
                 <h2>FRONT-END DEVELOPER</h2>
                 <div class="icon-contact-frame">
-                    <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
-                        <img src="/linkedin-icon.png" class="icon-contact"/>
+                    <a aria-label="linkedin" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="icon-link">
+                        <img src="/linkedin-icon.png" alt="linkedin-icon" class="icon-contact"/>
                     </a>
-                    <a href="https://github.com/nattawatsupangsarn015/" target="_blank" class="icon-link">
-                        <img src="/github-icon.png" class="icon-contact"/>
+                    <a aria-label="github" href="https://github.com/nattawatsupangsarn015/" target="_blank" rel="noopener" class="icon-link">
+                        <img src="/github-icon.png" alt="github-icon" class="icon-contact"/>
                     </a>
-                    <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="icon-link">
-                        <img src="/email-icon.png" class="icon-contact"/>
+                    <a aria-label="email" href="mailto:nattawatsupangsarn@gmail.com" target="_blank" rel="noopener" class="icon-link">
+                        <img src="/email-icon.png" alt="email-icon" class="icon-contact"/>
                     </a>
-                    <a href="tel:+669322942" target="_blank" class="icon-link">
-                        <img src="/phone-icon.png" class="icon-contact"/>
+                    <a aria-label="phone" href="tel:+669322942" target="_blank" rel="noopener" class="icon-link">
+                        <img src="/phone-icon.png" alt="phone-icon" class="icon-contact"/>
                     </a>
                 </div>
                 <div class="learn-more">
@@ -51,17 +51,17 @@
         <div id="header-menu-md" class="header-menu"> 
             <div @click="backHome()" style="cursor: pointer;">{{$t('Name')}} {{$t('LastName')}}</div>
             <div class="icon-menu-header">
-                <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
-                    <img src="/linkedin-icon.png" class="icon-contact"/>
+                <a aria-label="linkedin" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/linkedin-icon.png" alt="linkedin-icon" class="icon-contact"/>
                 </a>
-                <a href="https://github.com/nattawatsupangsarn015/" target="_blank" class="icon-link">
-                    <img src="/github-icon.png" class="icon-contact"/>
+                <a aria-label="github" href="https://github.com/nattawatsupangsarn015/" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/github-icon.png" alt="github-icon" class="icon-contact"/>
                 </a>
-                <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="icon-link">
-                    <img src="/email-icon.png" class="icon-contact"/>
+                <a aria-label="email" href="mailto:nattawatsupangsarn@gmail.com" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/email-icon.png" alt="email-icon" class="icon-contact"/>
                 </a>
-                <a href="tel:+669322942" target="_blank" class="icon-link">
-                    <img src="/phone-icon.png" class="icon-contact"/>
+                <a aria-label="phone" href="tel:+669322942" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/phone-icon.png" alt="phone-icon" class="icon-contact"/>
                 </a>
                 <div id="change-language-header-menu-md" style="position: relative;" class="change-language-header">
                     {{this.$i18n.locale.toUpperCase()}} 

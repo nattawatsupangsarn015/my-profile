@@ -16,34 +16,34 @@
             <h1>{{$t('LastName')}}</h1>
             <h2>FRONT-END DEVELOPER</h2>
             <div class="icon-header-scroll">
-                <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
-                    <img src="/linkedin-icon.png" class="icon-contact"/>
+                <a aria-label="linkedin" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/linkedin-icon.png" alt="linkedin-icon" class="icon-contact"/>
                 </a>
-                <a href="https://github.com/nattawatsupangsarn015/" target="_blank" class="icon-link">
-                    <img src="/github-icon.png" class="icon-contact"/>
+                <a aria-label="github" href="https://github.com/nattawatsupangsarn015/" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/github-icon.png" alt="github-icon" class="icon-contact"/>
                 </a>
-                <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="icon-link">
-                    <img src="/email-icon.png" class="icon-contact"/>
+                <a aria-label="email" href="mailto:nattawatsupangsarn@gmail.com" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/email-icon.png" alt="email-icon" class="icon-contact"/>
                 </a>
-                <a href="tel:+669322942" target="_blank" class="icon-link">
-                    <img src="/phone-icon.png" class="icon-contact"/>
+                <a aria-label="phone" href="tel:+669322942" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/phone-icon.png" alt="phone-icon" class="icon-contact"/>
                 </a>
             </div>
         </div>
         <div id="header-menu-sm" class="header-menu"> 
             <div @click="backHome()" style="cursor: pointer;">{{$t('Name')}} {{$t('LastName')}}</div>
             <div class="icon-header-scroll">
-                <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="icon-link">
-                    <img src="/linkedin-icon.png" class="icon-contact"/>
+                <a aria-label="linkedin" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/linkedin-icon.png" alt="linkedin-icon" class="icon-contact"/>
                 </a>
-                <a href="https://github.com/nattawatsupangsarn015/" target="_blank" class="icon-link">
-                    <img src="/github-icon.png" class="icon-contact"/>
+                <a aria-label="github" href="https://github.com/nattawatsupangsarn015/" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/github-icon.png" alt="github-icon" class="icon-contact"/>
                 </a>
-                <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="icon-link">
-                    <img src="/email-icon.png" class="icon-contact"/>
+                <a aria-label="email" href="mailto:nattawatsupangsarn@gmail.com" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/email-icon.png" alt="email-icon" class="icon-contact"/>
                 </a>
-                <a href="tel:+669322942" target="_blank" class="icon-link">
-                    <img src="/phone-icon.png" class="icon-contact"/>
+                <a aria-label="phone" href="tel:+669322942" target="_blank" rel="noopener" class="icon-link">
+                    <img src="/phone-icon.png" alt="phone-icon" class="icon-contact"/>
                 </a>
                 <div id="change-language-header-menu-sm" style="position: relative;" class="change-language-header">
                     {{this.$i18n.locale.toUpperCase()}} 
@@ -60,7 +60,7 @@
         </div>
         <div class="learn-more-frame">
             <div class="learn-more-mouse-frame-sm">
-                <img src="/hand.png" class="img-hand"/>
+                <img src="/hand.png" alt="hand" class="img-hand"/>
             </div>
             <div @click="goContent()" class="learn-more-button">
                 {{$t('learnMore')}}

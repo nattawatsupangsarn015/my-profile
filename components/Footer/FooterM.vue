@@ -1,18 +1,18 @@
 <template>
     <section id="footer-frame-sm" class="hidden-md-and-up hidden-xs-only footer-frame">
         <div class="img-background-frame">
-            <img src="/pawprint.png" class="img-background" />
+            <img src="/pawprint.png" alt="pawprint" class="img-background" />
         </div>
         <div class="footer-content-sm">
             <h1>{{$t('thankyou1')}}</h1>
             <h1>{{$t('thankyou2')}}</h1>
             <div class="footer-contact-frame">
                 <div class="footer-contact">
-                    <a href="mailto:nattawatsupangsarn@gmail.com" target="_blank" class="email-button">
+                    <a aria-label="email" href="mailto:nattawatsupangsarn@gmail.com" target="_blank" rel="noopener" class="email-button">
                         {{$t('emailMe')}}
                     </a>
                     <div class="text-button">{{$i18n.locale === 'en' ? 'OR' : 'หรือ'}}</div>
-                    <a href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" class="contact-button">
+                    <a aria-label="linkedin" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="contact-button">
                         {{$t('letConnect')}}
                     </a>
                 </div>
