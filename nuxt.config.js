@@ -92,6 +92,9 @@ module.exports = {
       }
     ]
   },
+  icons: {
+    /* icon options */
+  },
   manifest: {
     name: 'Nattawat-s.com',
     lang: 'en'
