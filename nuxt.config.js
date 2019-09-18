@@ -50,6 +50,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/pwa'
   ],
   /*
   ** vuetify module configuration
