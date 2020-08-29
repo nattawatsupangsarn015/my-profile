@@ -27,7 +27,7 @@
             <div class="header-content">
                 <h1>{{$t('Name')}}</h1> 
                 <h1>{{$t('LastName')}}</h1>
-                <h2>FRONT-END DEVELOPER</h2>
+                <h2>WEB DEVELOPER</h2>
                 <div class="icon-contact-frame">
                     <a aria-label="linkedin" href="https://www.linkedin.com/in/nattawatsupangsarn/" target="_blank" rel="noopener" class="icon-link">
                         <img src="/linkedin-icon.png" alt="linkedin-icon" class="icon-contact"/>
