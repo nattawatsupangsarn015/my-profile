@@ -1,21 +1,37 @@
 {
-    "Name": "NATTAWAT",
-    "LastName": "SUPANGSARN",
-    "learnMore": "LEARN MORE",
-    "hello": "HELLO",
-    "introduce": "I'm Max",
-    "address": "from Bangkok, Thailand.",
-    "contentParagraph1": "I love to code, and I love learning to get better at it. My passion for programming started when I was in a freashman year. I've always been fascinated by  computer but that was the first time I started to really know its capabillities, and what could you do with them, which is endless.",
-    "contentParagraph2": "For me, coding feels like music, you can create anything you want once you know how and there are no rules in making one.",
-    "content2Topic": "A LITTLE MORE ABOUT ME",
-    "graduated": "Graduated",
-    "graduatedToppic": "with B.E. in Department of Computer Engineering, from PSU Phuket Campus Class of 2017.",
-    "skillsToppic": "Skills",
-    "workExperience": "Work Experience",
-    "rangeWork": "Aug 18, 2018 - Sep 20, 2019",
-    "workExperienceContent": "Write, style & developing front-end components for company's website - a travel booking platform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework.",
-    "thankyou1":"THANKS FOR",
-    "thankyou2":"STOPPING BY !",
-    "emailMe": "EMAIL ME",
-    "letConnect": "LET'S CONNECT!"
+  "Name": "NATTAWAT",
+  "LastName": "SUPANGSARN",
+  "learnMore": "LEARN MORE",
+  "hello": "HELLO",
+  "introduce": "I'm Max",
+  "address": "from Bangkok, Thailand.",
+  "contentParagraph1": "I love to code, and I love learning to get better at it. My passion for programming started when I was in a freashman year. I've always been fascinated by  computer but that was the first time I started to really know its capabillities, and what could you do with them, which is endless.",
+  "contentParagraph2": "For me, coding feels like music, you can create anything you want once you know how and there are no rules in making one.",
+  "content2Topic": "A LITTLE MORE ABOUT ME",
+  "graduated": "Graduated",
+  "graduatedToppic": "with B.E. in Department of Computer Engineering, from PSU Phuket Campus Class of 2017.",
+  "skillsToppic": "Skills",
+  "workExperience": "Work Experience",
+  "bookaa": {
+    "rangeWork": "Aug, 2018 - Aug, 2019",
+    "workExperienceContent": "Write, style & developing front-end components for company's website - a travel booking platform, and also for back office system. Technology used is JavaScript and using html5, CSS and Vue.js framework."
+  },
+  "existing": {
+    "rangeWork": "Sep, 2019 - Apr, 2020",
+    "workExperienceContent": {
+      "one": "Write, style and developing the front-end components for the company's project website",
+      "two": "Write, and developing the back-end components for the start up project service. The teachnology used as Golang"
+    }
+  },
+  "vonder": {
+    "rangeWork": "Apr, 2020 - Current",
+    "workExperienceContent": {
+      "one": "Write, and developing the back-end components for the start up project service. The teachnology used as Javascript",
+      "two": "Write noSQL queries to retrieve data from the database using mongoDB"
+    }
+  },
+  "thankyou1": "THANKS FOR",
+  "thankyou2": "STOPPING BY !",
+  "emailMe": "EMAIL ME",
+  "letConnect": "LET'S CONNECT!"
 }
