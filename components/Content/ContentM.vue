@@ -16,7 +16,7 @@
             <div class="content-right">
                 <div class="content-sec01">
                     <h1 id="text-h1-sm">{{$t('hello')}} !</h1>
-                    <h2 id="text-h2-sm">{{$t('introduce')}}, a Front-end Developer</h2>
+                    <h2 id="text-h2-sm">{{$t('introduce')}}, Web Developer</h2>
                     <h2>{{$t('address')}}</h2>
                     <h3 style="margin-top: 2rem;">{{$t('contentParagraph1')}}</h3>
                     <h3 style="margin-bottom: 2rem;">{{$t('contentParagraph2')}}</h3>
